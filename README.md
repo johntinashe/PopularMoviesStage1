@@ -20,6 +20,6 @@ In the MainActivity file, put your generated API Key like this: API_KEY="my_gene
  align="center" width="400" height="800"/>
    
 <img src="https://firebasestorage.googleapis.com/v0/b/journalapp-985e6.appspot.com/o/Screenshot_20180728-161926_Popular%20Movies.jpg?alt=media&token=51733bb0-d787-48e0-b08c-b5a8d17cd22c"
-width="800" height="800"/>
+width="800" height="500"/>
 
 
