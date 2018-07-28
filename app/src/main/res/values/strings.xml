@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="movie_poster">movie poster</string>
+    <string name="error_no_movie">Error unable to get movie details</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="sort_type_key">sort_type</string>
+    <string name="default_value">popular</string>
+    <string name="backdrop_image">backdrop image</string>
+    <string name="no_results">No results found make sure you have a working internet connection</string>
+    <string name="refresh">Refresh</string>
+    <string name="sort_by_popularity">popular</string>
+    <string name="sort_by_rating">top_rated</string>
+</resources>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="movie"
+            type="com.github.johntinashe.popularmovies.model.Movie" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".DetailActivity"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/movie_backdrop"
+                android:layout_width="0dp"
+                android:layout_height="350dp"
+                android:backdrop="@{movie.backdrop}"
+                android:contentDescription="@string/backdrop_image"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/movie_poster"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:backdrop="@{movie.poster}"
+                android:contentDescription="@string/movie_poster"
+                android:elevation="15dp"
+                app:layout_constraintBottom_toBottomOf="@+id/movie_backdrop"
+                app:layout_constraintStart_toStartOf="@+id/movie_backdrop"
+                app:layout_constraintTop_toBottomOf="@+id/movie_backdrop"
+                app:layout_constraintVertical_bias="0.524" />
+
+            <TextView
+                android:id="@+id/movie_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@{movie.title}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/movie_poster"
+                app:layout_constraintTop_toBottomOf="@+id/movie_backdrop" />
+
+            <TextView
+                android:id="@+id/movie_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{movie.date}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintStart_toStartOf="@+id/movie_title"
+                app:layout_constraintTop_toBottomOf="@+id/movie_title" />
+
+            <RatingBar
+                android:id="@+id/movie_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:clickable="false"
+                android:vote="@{movie.vote}"
+                app:layout_constraintStart_toStartOf="@+id/movie_poster"
+                app:layout_constraintTop_toBottomOf="@+id/movie_poster"
+                android:isIndicator="false"/>
+
+            <TextView
+                android:id="@+id/movie_plot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@{movie.plot}"
+                android:textSize="17sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/movie_rating"
+                app:layout_constraintTop_toBottomOf="@+id/movie_rating" />
+
+            <TextView
+                android:id="@+id/movie_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@{movie.lang}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintBottom_toBottomOf="@+id/movie_date"
+                app:layout_constraintStart_toEndOf="@+id/movie_date"
+                app:layout_constraintTop_toTopOf="@+id/movie_date" />
+
+            <TextView
+                android:id="@+id/movie_vote"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:vote="@{movie.vote}"
+                android:textColor="@color/colorAccent"
+                android:textSize="35sp"
+                app:layout_constraintBottom_toBottomOf="@+id/movie_rating"
+                app:layout_constraintStart_toEndOf="@+id/movie_rating"
+                app:layout_constraintTop_toTopOf="@+id/movie_rating" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+    </layout>
+
